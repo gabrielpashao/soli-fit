@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de login da SoliFit">
+    <link rel="stylesheet" href="/src/globalstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <title>Formulário de Login - SoliFit</title>
+</head>
+<body>
+    <header>
+        <h1>SoliFit</h1>
+    </header>
+
+    <main>
+        <section aria-labelledby="login-heading">
+            <h2 id="login-heading">Login</h2>
+            <form action="/login" method="POST">
+                <div>
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required aria-required="true">
+                </div>
+
+                <div>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required aria-required="true">
+                </div>
+
+                <div>
+                    <label for="captcha">Quanto é:</label>
+                    <span id="captcha-question">3 + 5 = ?</span>
+                    <input type="text" id="captcha" name="captcha" placeholder="Digite a resposta" required aria-required="true">
+                </div>
+
+                <div>
+                    <input type="submit" value="Fazer Login">
+                </div>
+            </form>
+        </section>
+
+        <nav aria-label="Links adicionais">
+            <ul>
+                <li><a href="/esqueci-senha">Esqueci minha senha</a></li>
+                <li><a href="/criar-conta">Criar Conta</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>
