@@ -1,3 +1,11 @@
+:root {
+    --branco-neve: #FFFCF2;
+    --cinza-claro: #CCC5B9;
+    --cinza: #403D39;
+    --preto: #252422;
+    --laranja: #EB5E28;
+}
+
 body {
     margin: 0;
 }
@@ -8,4 +16,43 @@ h1 {
 
 h2, h3, h4, h5 p {
     font-family: 'Zain', sans-serif;
+}
+
+button {
+    font-family: 'Zain';
+    font-size: large;
+    color: var(--branco-neve);
+    background-color: var(--laranja);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--cinza);
+    padding: 1vh;
+}
+/* ----------------------------------------------------------------------*/
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    box-shadow: 0px 5px 10px var(--cinza);
+    width: 100%;
+}
+
+#navEsquerda {
+    align-items: center;
+    display: flex;
+    max-width: fit-content;
+    color: var(--preto);
+    margin-left: 2vh;
+    gap: 1vh;
+}
+
+.logoNav img {
+    width: 92px;
+    height: 92px;
+}
+
+#navDireita {
+    margin-right: 2vh;
+    max-width: fit-content;
 }
