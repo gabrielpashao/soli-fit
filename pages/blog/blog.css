@@ -1,8 +1,17 @@
+.title {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-size: 2rem;
+    color: var(--preto);
+    font-family: 'Gabarito', sans-serif;
+    font-weight: 700;
+}
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
 .card {
@@ -17,7 +26,7 @@
 }
 
 .card img {
-    width: 25%;
+    width: 50%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
