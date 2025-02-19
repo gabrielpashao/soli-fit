@@ -1,0 +1,64 @@
+main {
+    background-color: var(--preto);
+    padding: 5vh;
+    height: max-content;
+}
+
+#planos {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.planosTitulo {
+    margin-top: 0;
+    color: var(--laranja);
+    font-size: xx-large;
+}
+
+#cardsPlanos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vh;
+}
+
+.plano {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--branco-neve);
+    border-radius: 5px;
+    padding: 2vh;
+    width: 250px;
+    height: 500px;
+}
+
+.tipo {
+    font-weight: 400;
+    color: var(--preto);
+}
+
+.beneficios {
+    text-align: left;
+    font-family: 'Zain';
+    color: var(--cinza);
+}
+
+.valor {
+    color: var(--laranja);
+    text-shadow: 0 0 2px var(--preto);
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.subTexto {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: medium;
+}
+
+.contratar {
+    font-size: large;
+}
