@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/globalstyles.css">
+    <link rel="stylesheet" href="/pages/home/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,24 +15,73 @@
 </head>
 
 <body>
-    <nav>
-        <section id="navEsquerda">
-            <a href="home.html">
-                <div class="logoNav">
-                    <img src="/src/img/logo-colorido.png" alt="SoliFit" class="logo">
-                </div></a>
-            <h1>Academia do seu jeito!</h1>
-        </section>
-        <section id="navDireita">
-            <div class="botoes">
-                <button>Planos</button>
-                <button>Saúde</button>
-                <button>Login</button>
+    <header>
+        <nav>
+            <section id="navEsquerda">
+                <a href="/pages/home/home.html">
+                    <div class="logoNav">
+                        <img src="/src/img/logo-colorido.png" alt="SoliFit" class="logo">
+                    </div>
+                </a>
+                <h1>Academia do seu jeito!</h1>
+            </section>
+            <section id="navDireita">
+                <div class="botoes">
+                    <button>Planos</button>
+                    <button>Blog Saúde</button>
+                    <button>Login</button>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <div class="bannerEsquerdo">
+                <img src="/src/img/logo-colorido.png" alt="SoliFit">
+                <h1 class="bannerTexto">Na <strong>SoliFit</strong>, você treina do seu jeito!</h1>
+            </div>
+            <div class="bannerDireito">
+                <h2 class="bannerTexto">Com profissionais qualificados, a <strong>SoliFit</strong> se dedica para
+                    entregar o melhor para você. Aqui, você encontra equipamentos da <strong>melhor qualidade</strong>
+                    para lhe proporcionar a <strong>melhor experiência</strong> durante seu treino.</h2>
             </div>
         </section>
-    </nav>
-    <main></main>
-    <footer></footer>
+        <section id="planos">
+            <div class="promocional">
+                <div class="planosEquerdo">
+                    <h2 class="planosPequeno">Planos a partir de:</h2>
+                    <h1 class="planosGrande">R$ 99,90*</h1>
+                    <h3 class="subTexto">*Em 12x no plano anual no cartão de crédito. R$ 1.198,80 à vista</h3>
+                </div>
+                <div class="planosCentro">
+                    <h3 class="divisor">|</h3>
+                </div>
+                <div class="planosDireito">
+                    <ul class="listaPlanos">
+                        <li>Horário flexível</li>
+                        <li>Aulas de defesa pessoal</li>
+                        <li>Aulas de dança</li>
+                        <li>Acompanhamento nutricional</li>
+                        <li>Sorteio de brindes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="direcionamento">
+                <h1>Quer saber mais? Confira nossos planos:</h1>
+                <a href=""><button>Clique aqui</button></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footerEsquerdo">
+            <img src="/src/img/logo-colorido.png" alt="SoliFit" class="logoFooter">
+            <div id="textoFooter">
+                <h2 class="solifitFooter">Solfit Academias</h2>
+                <h3 class="infoFooter">+55 81 3495-7289</h3>
+                <h3 class="infoFooter">solifit@solifit.com.br</h3>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

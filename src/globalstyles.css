@@ -20,7 +20,6 @@ h2, h3, h4, h5 p {
 
 button {
     font-family: 'Zain';
-    font-size: large;
     color: var(--branco-neve);
     background-color: var(--laranja);
     border: none;
@@ -32,9 +31,10 @@ button {
 nav {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: relative;
     justify-content: space-between;
     box-shadow: 0px 5px 10px var(--cinza);
+    background-color: var(--branco-neve);
     width: 100%;
 }
 
@@ -55,4 +55,43 @@ nav {
 #navDireita {
     margin-right: 2vh;
     max-width: fit-content;
+}
+
+.botoes button {
+    width: 92px;
+    font-size: large;
+}
+/* ----------------------------------------------------------------------*/
+footer {
+    display: flex;
+    align-content: center;
+    background-color: var(--cinza);
+    padding: 5vh;
+}
+
+#footerEsquerdo {
+    display: flex;
+    align-items: center;
+    color: var(--branco-neve);
+    gap: 1vh;
+}
+
+.textoFooter {
+    align-items: center;
+}
+
+.solifitFooter {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.infoFooter {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 200;
+}
+
+.logoFooter {
+    max-width: 90px;
+    max-height: 90px;
 }
