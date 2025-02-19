@@ -8,13 +8,16 @@
 
 body {
     margin: 0;
+    font-family: 'Zain', sans-serif;
+    background-color: var(--branco-neve);
+    color: var(--preto);
 }
 
 h1 {
     font-family: 'Gabarito', sans-serif;
 }
 
-h2, h3, h4, h5 p {
+h2, h3, h4, h5, p {
     font-family: 'Zain', sans-serif;
 }
 
@@ -26,24 +29,22 @@ button {
     border-radius: 5px;
     box-shadow: 0 0 5px var(--cinza);
     padding: 1vh;
+    cursor: pointer;
 }
+
 /* ----------------------------------------------------------------------*/
 nav {
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: space-between;
     box-shadow: 0px 5px 10px var(--cinza);
     background-color: var(--branco-neve);
-    width: 100%;
+    padding: 1vh 2vh;
 }
 
 #navEsquerda {
-    align-items: center;
     display: flex;
-    max-width: fit-content;
-    color: var(--preto);
-    margin-left: 2vh;
+    align-items: center;
     gap: 1vh;
 }
 
@@ -53,31 +54,33 @@ nav {
 }
 
 #navDireita {
-    margin-right: 2vh;
-    max-width: fit-content;
+    display: flex;
+    gap: 1vh;
 }
 
 .botoes button {
     width: 92px;
     font-size: large;
 }
+
 /* ----------------------------------------------------------------------*/
 footer {
     display: flex;
-    align-content: center;
+    align-items: center;
     background-color: var(--cinza);
     padding: 5vh;
+    color: var(--branco-neve);
 }
 
 #footerEsquerdo {
     display: flex;
     align-items: center;
-    color: var(--branco-neve);
     gap: 1vh;
 }
 
 .textoFooter {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .solifitFooter {
@@ -94,4 +97,63 @@ footer {
 .logoFooter {
     max-width: 90px;
     max-height: 90px;
+}
+
+/* ----------------------------------------------------------------------*/
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--branco-neve);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    width: 25%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--preto);
+}
+
+.card ul {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.card ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: var(--cinza);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
 }
