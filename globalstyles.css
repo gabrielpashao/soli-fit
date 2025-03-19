@@ -55,6 +55,7 @@ nav {
 #navDireita {
     margin-right: 2vh;
     max-width: fit-content;
+    gap: 5vh;
 }
 
 .botoes button {
