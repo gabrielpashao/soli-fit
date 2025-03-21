@@ -27,6 +27,10 @@ button {
     box-shadow: 0 0 5px var(--cinza);
     padding: 1vh;
 }
+
+button:hover {
+    cursor: pointer;
+}
 /* ----------------------------------------------------------------------*/
 nav {
     display: flex;
