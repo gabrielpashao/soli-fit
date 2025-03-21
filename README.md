@@ -11,6 +11,39 @@ _(README.md em construção)_
 - [@gabrielpashao](https://github.com/gabrielpashao)
 - [@felipegbulhoes](https://github.com/felipegbulhoes)
 
+## Estrutura do projeto
+
+```
+soli-fit
+|   globalstyles.css
+|   index.html
+|   README.md
+|   script.js
+|
++---pages
+|   +---blog
+|   |       blog.css
+|   |       blog.html
+|   |
+|   +---cadastro
+|   |       cadastro.css
+|   |       cadastro.html
+|   |
+|   +---home
+|   |       home.css
+|   |
+|   +---login
+|   |       login.css
+|   |       login.html
+|   |
+|   \---planos
+|           planos.css
+|           planos.html
+|
+\---src
+    \---img
+
+```
 
 ## Linguagens utilizadas
 
