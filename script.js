@@ -49,4 +49,30 @@ botoes.forEach(botoes => {
     });
 });
 
+/* Eventos dos inputs */
+let inputs = document.querySelectorAll('input');
 
+inputs.forEach(inputs => {
+    /* Altera a cor do input ao passar o mouse por cima */
+    inputs.addEventListener('mouseover', () => {
+        inputs.style.backgroundColor = '#CCC5B9';
+    });
+    /* Altera a cor do input ao retirar o mouse */
+    inputs.addEventListener('mouseleave', () => {
+        inputs.style.backgroundColor = 'white'
+    });
+});
+
+/* Eventos dos links */
+let links = document.querySelectorAll('a');
+
+links.forEach(links => {
+    /* Adiciona sublinhado ao passar o mouse por cima */
+    links.addEventListener('mouseover', () => {
+        links.style.textDecoration = 'underline';
+    });
+    /* Retira o sublinhado ao retirar o mouse de cima */
+    links.addEventListener('mouseleave', () => {
+        links.style.textDecoration = 'none';
+    });
+})
