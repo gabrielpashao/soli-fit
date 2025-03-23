@@ -41,6 +41,7 @@ button:hover {
 input {
     border: none;
     border-radius: 5px;
+    outline-color: var(--laranja);
     text-align: center;
     transition: 0.3s;
 }

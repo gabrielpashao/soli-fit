@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <script src="../../script.js" defer></script>
+    <script src="login.js" defer></script>
     <title>Formulário de Login - SoliFit</title>
 </head>
 <body>
@@ -23,9 +24,8 @@
                 <input type="text" id="username" name="username" required aria-required="true" placeholder="Usuário">
                 <input type="password" id="password" name="password" required aria-required="true" placeholder="Senha">
                 <div class="secFormulario">
-                    <label for="captcha">Quanto é:</label>
-                    <span id="captcha-question"></span>
-                    <input type="text" id="captcha" name="captcha" placeholder="Digite a resposta" required aria-required="true">
+                    <label for="captcha">Quanto é <span id="captchaPergunta"></span>?</label>
+                    <input type="text" id="captchaResposta" name="captcha" placeholder="Digite a resposta" required aria-required="true">
                 </div>
 
                 <div class="secFormulario">
