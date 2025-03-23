@@ -29,3 +29,40 @@ function validarCaptcha() {
         window.alert('❌ CAPTCHA incorreto, tente novamente!');
     }
 }
+
+// Animação para seção de criar conta
+const main = document.querySelector('main');
+const loginSection = document.getElementById('loginCard');
+const cadastroSection = document.getElementById('cadastroCard');
+const criarContaBtn = document.getElementById('criarConta');
+const voltarLoginBtn = document.getElementById('voltarLogin');
+
+// Mantém a seção de login ativa
+loginSection.classList.add('ativo');
+cadastroSection.classList.add('inativo');
+
+// Exibe seção de cadastro ao clicar em 'Criar conta'
+criarContaBtn.addEventListener('click', () => {
+    loginSection.classList.remove('ativo');
+    loginSection.classList.add('inativo');
+    cadastroSection.classList.remove('inativo');
+
+    cadastroSection.style.display = 'grid'; // Torna visível para transição funcionar
+    setTimeout(() => {
+        cadastroSection.classList.add('ativo');
+        main.style.padding = '25vh';
+    }, 10); // Pequeno atraso para permitir animação
+});
+
+// Volta a seção de login ao clicar em 'Já tem uma conta'
+voltarLoginBtn.addEventListener('click', () => {
+    cadastroSection.classList.remove('ativo');
+    cadastroSection.classList.add('inativo');
+    loginSection.classList.remove('inativo');
+
+    setTimeout(() => {
+        cadastroSection.style.display = 'none'; // Esconde após a animação
+        loginSection.classList.add('ativo');
+        main.style.padding = '11vh';
+    }, 500); // Tempo igual ao da transição CSS
+});
