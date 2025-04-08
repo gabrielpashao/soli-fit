@@ -1,29 +1,89 @@
-main, .formularioLogin, .secFormulario, #links {
+/* Estilos gerais */
+main {
+    background-color: var(--preto);
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.card {
+    display: none;
+    background-color: var(--branco-neve);
+    width: 30%;
+    min-width: 400px;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.card.ativo {
     display: grid;
     align-items: center;
     justify-items: center;
 }
 
-input, button { 
-    width: 40vh;
-    margin-bottom: 2vh;
-    padding: 1vh;
+.formularioLogin {
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
 }
 
-main {
-    background-color: var(--preto);
-    padding: 11vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: padding 0.3s ease-in-out;
+.secFormulario {
+    display: grid;
+    width: 100%;
+    gap: 0.5rem;
 }
 
+input, select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--laranja);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Validações */
+input:valid, select:valid {
+    border-color: #4CAF50;
+    background-color: #f8fff8;
+}
+
+input:invalid, select:invalid {
+    border-color: #F44336;
+    background-color: #fff8f8;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--laranja);
+    box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+/* Transições */
 .inativo {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
 }
 
 .ativo {
@@ -32,33 +92,65 @@ main {
     height: auto;
 }
 
-#cadastroCard {
-    align-content: center;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.5s ease-in-out;
-}
-
-#loginCard, #cadastroCard {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    background-color: var(--branco-neve);
-    width: 30%;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
 .loginTitulo {
     color: var(--laranja);
     text-shadow: 0 0 2px var(--preto);
-    font-size: 50px;
-    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-.formularioLogin {
-    color: var(--preto);
-    max-width: 100%;
+#links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#links a {
+    color: var(--laranja);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#links a:hover {
+    text-decoration: underline;
+}
+
+.dica-validacao {
+    display: none;
+    font-size: 0.8rem;
+    color: #F44336;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #fff8f8;
+    border-radius: 0 0 4px 4px;
+    border-left: 2px solid #F44336;
+    border-right: 2px solid #F44336;
+    border-bottom: 2px solid #F44336;
+}
+
+input:invalid + .dica-validacao,
+input:invalid:focus + .dica-validacao {
+    display: block;
+}
+
+input:valid + .dica-validacao {
+    display: none;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        min-width: unset;
+    }
+    
+    main {
+        padding: 2vh;
+    }
 }

@@ -18,18 +18,17 @@
         <nav></nav>
     </header>
     <main>
-        <section id="loginCard">
+        <section id="loginCard" class="card ativo">
             <h1 class="loginTitulo">Login</h1>
-            <form class="formularioLogin" action="/login" method="POST">
-                <input type="text" id="username" name="username" required aria-required="true" placeholder="Usuário">
-                <input type="password" id="password" name="password" required aria-required="true" placeholder="Senha">
+            <form class="formularioLogin" id="loginForm" method="POST">
+                <input type="text" id="loginUsername" name="username" required placeholder="Usuário">
+                <input type="password" id="loginPassword" name="password" required placeholder="Senha">
                 <div class="secFormulario">
-                    <label for="captcha">Quanto é <span id="captchaPergunta"></span>?</label>
-                    <input type="text" id="captchaResposta" name="captcha" placeholder="Digite a resposta" required aria-required="true">
+                    <label for="loginCaptcha">Quanto é <span id="loginCaptchaPergunta"></span>?</label>
+                    <input type="text" id="loginCaptchaResposta" name="captcha" required placeholder="Digite a resposta">
                 </div>
-
                 <div class="secFormulario">
-                    <button type="submit" value="fazerLogin">Entrar</button>
+                    <button type="submit">Entrar</button>
                 </div>
             </form>
             <div id="links">
@@ -38,20 +37,20 @@
             </div>
         </section>
 
-        <section id="cadastroCard">
+        <section id="cadastroCard" class="card">
             <h1 class="loginTitulo">Crie sua conta</h1>
-            <form class="formularioLogin" action="/cadastro" method="POST">
-                <input type="text" id="username" name="username" required aria-required="true" placeholder="Usuário">
-                <input type="text" id="email" name="email" required aria-required="true" placeholder="E-mail">
-                <input type="password" id="password" name="password" required aria-required="true" placeholder="Senha">
-                <input type="password" id="confirmPassword" name="confirmPassword" required aria-required="true" placeholder="Confirme sua senha">
-                <input type="text" id="nomeCompleto" name="nomeCompleto" required aria-required="true" placeholder="Nome completo">
-                <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" id="dataNascimento" name="dataNascimento" required aria-required="true" placeholder="Data de Nascimento">
-                <input type="text" id="telefone" name="telefone" required aria-required="true" placeholder="Telefone">
-                <input type="text" id="CPF" name="CPF" required aria-required="true" placeholder="CPF">
-                <label for="sexo">Sexo</label>
-                <select name="sexo" id="sexo" required aria-required="true">
+            <form class="formularioLogin" id="cadastroForm" method="POST">
+                <input type="text" id="cadUsername" name="username" required placeholder="Usuário">
+                <input type="email" id="cadEmail" name="email" required placeholder="E-mail">
+                <input type="password" id="cadPassword" name="password" required placeholder="Senha">
+                <input type="password" id="cadConfirmPassword" name="confirmPassword" required placeholder="Confirme sua senha">
+                <input type="text" id="cadNomeCompleto" name="nomeCompleto" required placeholder="Nome completo">
+                <label for="cadDataNascimento">Data de Nascimento</label>
+                <input type="date" id="cadDataNascimento" name="dataNascimento" required>
+                <input type="tel" id="cadTelefone" name="telefone" required placeholder="Telefone">
+                <input type="text" id="cadCPF" name="CPF" required placeholder="CPF">
+                <label for="cadSexo">Sexo</label>
+                <select id="cadSexo" name="sexo" required>
                     <option value="">Selecione</option>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
@@ -59,12 +58,11 @@
                     <option value="nulo">Prefiro não responder</option>
                 </select>
                 <div class="secFormulario">
-                    <label for="captcha">Quanto é <span id="captchaPergunta"></span>?</label>
-                    <input type="text" id="captchaResposta" name="captcha" placeholder="Digite a resposta" required aria-required="true">
+                    <label for="cadCaptchaResposta">Quanto é <span id="cadCaptchaPergunta"></span>?</label>
+                    <input type="text" id="cadCaptchaResposta" name="captcha" required placeholder="Digite a resposta">
                 </div>
-
                 <div class="secFormulario">
-                    <button type="submit" value="fazerLogin">Entrar</button>
+                    <button type="submit">Cadastrar</button>
                 </div>
             </form>
             <div id="links">
