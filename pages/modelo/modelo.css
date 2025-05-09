@@ -1,0 +1,33 @@
+code {
+    background-color: var(--cinza);
+    color: var(--branco-neve);
+}
+
+main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 4vh;
+    background-color: var(--preto);
+}
+
+#secExemplo {
+    background-color: var(--branco-neve);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 4vh;
+}
+
+.exemploTitulo {
+    margin-top: 0;
+    color: var(--laranja);
+    font-size: xx-large;
+}
+
+.conteudoExemplo {
+    text-align: center;
+    padding: 3vh;
+}

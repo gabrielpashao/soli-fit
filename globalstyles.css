@@ -14,12 +14,17 @@ h1 {
     font-family: 'Gabarito', sans-serif;
 }
 
-h2, h3, h4, h5 p {
+h2, h3, h4, h5, p, li, form, input, button, a {
     font-family: 'Zain', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
 button {
-    font-family: 'Zain';
     color: var(--branco-neve);
     background-color: var(--laranja);
     border: none;
@@ -30,6 +35,19 @@ button {
 
 button:hover {
     cursor: pointer;
+    transition: 0.3s;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    outline-color: var(--laranja);
+    text-align: center;
+    transition: 0.3s;
+}
+
+input:focus { 
+    border: none;
 }
 /* ----------------------------------------------------------------------*/
 nav {
@@ -37,9 +55,13 @@ nav {
     align-items: center;
     position: relative;
     justify-content: space-between;
-    box-shadow: 0px 5px 10px var(--cinza);
-    background-color: var(--branco-neve);
+    box-shadow: 0px 5px 10px var(--preto);
+    background-color: var(--cinza);
     width: 100%;
+}
+
+nav h1 {
+    color: var(--branco-neve);
 }
 
 #navEsquerda {

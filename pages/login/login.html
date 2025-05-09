@@ -5,48 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Formulário de login da SoliFit">
     <link rel="stylesheet" href="../../globalstyles.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
     <script src="../../script.js" defer></script>
-    <title>Formulário de Login - SoliFit</title>
+    <script src="login.js" defer></script>
+    <title>Login</title>
 </head>
 <body>
     <header>
         <nav></nav>
     </header>
     <main>
-        <section aria-labelledby="login-heading">
-            <h2 id="login-heading">Login</h2>
-            <form action="/login" method="POST">
-                <div>
-                    <label for="username">Usuário:</label>
-                    <input type="text" id="username" name="username" required aria-required="true">
+        <section id="loginCard" class="card ativo">
+            <h1 class="loginTitulo">Login</h1>
+            <form class="formularioLogin" id="loginForm" method="POST">
+                <input type="text" id="loginUsername" name="username" required placeholder="Usuário">
+                <input type="password" id="loginPassword" name="password" required placeholder="Senha">
+                <div class="secFormulario">
+                    <label for="loginCaptcha">Quanto é <span id="loginCaptchaPergunta"></span>?</label>
+                    <input type="text" id="loginCaptchaResposta" name="captcha" required placeholder="Digite a resposta">
                 </div>
-
-                <div>
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" required aria-required="true">
-                </div>
-
-                <div>
-                    <label for="captcha">Quanto é:</label>
-                    <span id="captcha-question">3 + 5 = ?</span>
-                    <input type="text" id="captcha" name="captcha" placeholder="Digite a resposta" required aria-required="true">
-                </div>
-
-                <div>
-                    <input type="submit" value="Fazer Login">
+                <div class="secFormulario">
+                    <button type="submit">Entrar</button>
                 </div>
             </form>
+            <div id="links">
+                <a href="/esqueci-senha">Esqueci minha senha</a>
+                <a href="#" id="criarConta">Criar Conta</a>
+            </div>
         </section>
 
-        <nav aria-label="Links adicionais">
-            <ul>
-                <li><a href="/esqueci-senha">Esqueci minha senha</a></li>
-                <li><a href="/pages/cadastro/cadastro.html">Criar Conta</a></li>
-            </ul>
-        </nav>
+        <section id="cadastroCard" class="card">
+            <h1 class="loginTitulo">Crie sua conta</h1>
+            <form class="formularioLogin" id="cadastroForm" method="POST">
+                <input type="text" id="cadUsername" name="username" required placeholder="Usuário">
+                <input type="email" id="cadEmail" name="email" required placeholder="E-mail">
+                <input type="password" id="cadPassword" name="password" required placeholder="Senha">
+                <input type="password" id="cadConfirmPassword" name="confirmPassword" required placeholder="Confirme sua senha">
+                <input type="text" id="cadNomeCompleto" name="nomeCompleto" required placeholder="Nome completo">
+                <label for="cadDataNascimento">Data de Nascimento</label>
+                <input type="date" id="cadDataNascimento" name="dataNascimento" required>
+                <input type="tel" id="cadTelefone" name="telefone" required placeholder="Telefone">
+                <input type="text" id="cadCPF" name="CPF" required placeholder="CPF">
+                <label for="cadSexo">Sexo</label>
+                <select id="cadSexo" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                    <option value="nulo">Prefiro não responder</option>
+                </select>
+                <div class="secFormulario">
+                    <label for="cadCaptchaResposta">Quanto é <span id="cadCaptchaPergunta"></span>?</label>
+                    <input type="text" id="cadCaptchaResposta" name="captcha" required placeholder="Digite a resposta">
+                </div>
+                <div class="secFormulario">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+            <div id="links">
+                <a href="#" id="voltarLogin">Já tem uma conta? Faça Login.</a>
+            </div>
+        </section>
     </main>
     <footer></footer>
 </body>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../globalstyles.css"> <!-- ATENÇÃO! CSS Global do projeto. Não altere ou remova -->
+    <link rel="stylesheet" href="modelo.css"> <!-- Sempre altere para o caminho do CSS local da página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <script src="../../script.js" defer></script>
+    <title>SoliFit</title>
+</head>
+
+<body>
+    <!-- ATENÇÃO! Não alterar o elemento header e o nav. Estão sendo gerados dinâmicamente pelo script.js -->
+    <header>
+        <nav></nav>
+    </header>
+
+    <!-- Todo o conteúdo da página deverá ser escrito apenas dentro do elemento main. -->
+    <main>
+        <h1 class="exemploTitulo">Este é um modelo a ser seguido</h1>
+        <section id="secExemplo">
+            <div class="conteudoExemplo">
+                <p>Os elementos que forem criados precisam seguir esse padrão, respeitando as cores definidas no CSS
+                    Global. Cada página deve ter seu próprio arquivo <code>.html</code> e <code>.css</code>.
+                    As alterações refentes a <strong>página atual</strong> serão feitas no respectivo arquivo css, e as
+                    de nível global (que englobam todas as páginas como <code>NavBar</code> e <code>Footer</code> por
+                    exemplo) no arquivo <code>globalstyles.css</code>.
+                    Para que não haja problemas com o site, não altere os arquivos <code>globalstyles.css</code>,
+                    <code>index.html</code> e <code>script.js</code>. Se a <strong>página atual</strong> precisar de
+                    dinâmismo ou um script que atenda somente a ela, criar dentro da pasta do projeto o arquivo
+                    <code>.js</code> da página (como por exemplo um arquivo <code>modelo.js</code> neste caso).</p>
+            </div>
+        </section>
+        <h1 class="exemploTitulo">Regras de desenvolvimento</h1>
+        <section id="secExemplo">
+            <div class="conteudoExemplo">
+                <p>Após clonar o repositório, altere para a branch de develop com <code>git checkout develop</code>. Ao
+                    iniciar o desenvolvimento de uma nova feature, a partir da branch develop, crie a branch da feature
+                    que você irá realizar seguindo o seguinte padrão:
+                    <code>git checkout -b "feature/nome-da-feature"</code> de forma a criar uma nova branch com o nome
+                    feature/nome-da-feature e nela realizar o desenvolvimento da funcionalidade que você ficou
+                    responsável. Ao finalizar, faça o <code>git commit -m "Nome do commit"</code> seguido do
+                    <code>git push</code> para enviar suas alterações para a sua branch. Quando sua funcionalidade
+                    estiver totalmente concluída, você irá fazer um pull request da sua branch para a branch develop. No
+                    GitHub ao abrir o pull request, a base será develop e o compare será a branch que você desenvolveu.
+                    <br> </BR><strong>NÃO FAÇA PULL REQUEST OU MERGE PARA A BRANCH MAIN</strong></p>
+            </div>
+        </section>
+        <h1 class="exemploTitulo">Variáveis de cores do CSS</h1>
+        <section id="secExemplo">
+            <div class="conteudoExemplo">
+                <p>Abrindo o arquivo <code>globalstyles.css</code> você verá definidas no <code>:root</code> as variáves
+                    de cores do CSS, que são elas:</p>
+                <ul>
+                    <li>
+                        <h3>--branco-neve: <code>#FFFCF2</code></h3>
+                    </li>
+                    <li>
+                        <h3>--cinza-claro: <code>#CCC5B9</code></h3>
+                    </li>
+                    <li>
+                        <h3>--cinza: <code>#403D39</code></h3>
+                    </li>
+                    <li>
+                        <h3>--preto: <code>#252422</code></h3>
+                    </li>
+                    <li>
+                        <h3>--laranja: <code>#EB5E28</code></h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- ATENÇÃO! Não alterar o elemento footer. Está sendo gerado dinâmicamente pelo script.js. -->
+    <footer></footer>
+</body>
+
+</html>

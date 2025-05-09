@@ -1,3 +1,11 @@
+:root {
+    --verde: #4CAF50;
+    --azul: #2196F3;
+    --laranja: #FF9800;
+    --cinza-escuro: #555;
+    --branco: #ffffff;
+}
+
 .title {
     text-align: center;
     margin: 40px 0 20px 0;
@@ -6,10 +14,25 @@
     font-family: 'Gabarito', sans-serif;
     font-weight: 700;
 }
+
+.title i {
+    margin-right: 10px;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--cinza-escuro);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px;
     padding: 20px;
     margin-bottom: 40px;
 }
@@ -18,28 +41,40 @@
     background-color: var(--branco-neve);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
-    width: 50%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-content {
+    padding: 20px;
 }
 
 .card h2 {
     margin-top: 0;
     color: var(--preto);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .card ul {
     padding-left: 20px;
     text-align: left;
+    margin-bottom: 15px;
 }
 
 .card ul li {
@@ -48,10 +83,66 @@
 }
 
 .card p {
-    color: var(--cinza);
+    color: var(--cinza-escuro);
     text-align: left;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
+/* Categorias */
+.card-category {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--branco);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.receita .card-category {
+    background-color: var(--verde);
+}
+
+.exercicio .card-category {
+    background-color: var(--azul);
+}
+
+.bem-estar .card-category {
+    background-color: var(--laranja);
+}
+
+/* Bordas superiores por categoria */
+.receita {
+    border-top: 4px solid var(--verde);
+}
+
+.exercicio {
+    border-top: 4px solid var(--azul);
+}
+
+.bem-estar {
+    border-top: 4px solid var(--laranja);
+}
+
+/* Meta informações */
+.recipe-meta, .exercise-meta, .wellness-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    color: var(--cinza-escuro);
+    font-size: 0.9rem;
+}
+
+.recipe-meta i, .exercise-meta i, .wellness-meta i {
+    margin-right: 5px;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .card-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -62,4 +153,18 @@
     .card-container {
         grid-template-columns: 1fr;
     }
+    
+    .title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
+/* Posicionamento relativo para o card-category */
+.card {
+    position: relative;
 }
